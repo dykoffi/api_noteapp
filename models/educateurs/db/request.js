@@ -1,7 +1,16 @@
 exports.get_educateurs = {
     name: "list_educateurs",
-    text: "SELECT * FROM app.educateurs"
+    text: "SELECT id, nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, matricule FROM app.educateurs"
 }
-exports.post_educateurs = {}
-exports.del_educateurs = {}
-exports.put_educateurs = {}
+exports.post_educateurs = {
+    name: "post_educateurs",
+    text: "INSERT INTO app.educateurs(nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, matricule) VALUES ($1,$2,$3, $4, $5, $6, $7, $8, $9)"
+}
+exports.del_educateurs = {
+    name: "del_educateurs",
+    text: "DELETE FROM app.educateurs WHERE id=$1"
+}
+exports.put_educateurs = {
+    name: "del_educateurs",
+    text: "UPDATE app.educateurs SET nom=$1, prenoms=$2, pseudo=$3, photo=$4, email=$5, contacts=$6, no_cni=$7, date_exp_cni=$8, matricule=$9 WHERE id=$10"
+}
