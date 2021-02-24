@@ -37,8 +37,8 @@ router
     .post("/", (req, res, next) => {
         let body = {}
         try { body = JSON.parse(Object.keys(req.body)[0]) } catch (error) { body = req.body }
-        const { nom, zone, email } = body
-        pg.query(post_enseignants, [nom, zone, email], (error, result) => {
+        const { nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, matricule } = body
+        pg.query(post_enseignants, [nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, matricule], (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)
@@ -52,8 +52,8 @@ router
     .put("/:id", (req, res, next) => {
         let body = {}
         try { body = JSON.parse(Object.keys(req.body)[0]) } catch (error) { body = req.body }
-        const { nom, zone, email } = body
-        pg.query(put_enseignants, [nom, zone, email, req.params.id], (error, result) => {
+        const { nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, matricule } = body
+        pg.query(put_enseignants, [nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, req.matricule, req.params.id], (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)

@@ -1,0 +1,27 @@
+### list des etablissements
+GET http://localhost:8000/etablissements HTTP/1.1
+
+### ajouter un etablissement
+POST http://localhost:8000/etablissements HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "MALI",
+    "code": "MALIO45",
+    "email": "info@mali.edu.ci",
+    "dren": 3
+}
+
+### Modifer un etablissement
+PUT http://localhost:8000/etablissements/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "ISTC",
+    "code": "IST278",
+    "email": "info@istc.red.ci",
+    "dren": 4
+}
+
+###supprimer un etablissement
+DELETE http://localhost:8000/etablissements/2 HTTP/1.1

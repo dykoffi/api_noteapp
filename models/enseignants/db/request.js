@@ -11,6 +11,6 @@ exports.del_enseignants = {
     text: "DELETE FROM app.enseignants WHERE id=$1"
 }
 exports.put_enseignants = {
-    name: "del_enseignants",
+    name: "put_enseignants",
     text: "UPDATE app.enseignants SET nom=$1, prenoms=$2, pseudo=$3, photo=$4, email=$5, contacts=$6, no_cni=$7, date_exp_cni=$8, matricule=$9 WHERE id=$10"
 }

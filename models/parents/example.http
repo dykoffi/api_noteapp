@@ -1,0 +1,41 @@
+### list des parents
+GET http://localhost:8000/parents HTTP/1.1
+
+### ajouter un parent
+POST http://localhost:8000/parents HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "DIHU",
+    "prenoms": "noco",
+    "pseudo": "nocoDIHU14",
+    "photo": "DIHUnoco.jpeg",
+    "email": "nocoDIHU@yahoo.fr",
+    "contacts": [
+      "02 30 14 02",
+      "87 59 32 15"
+    ],
+    "no_cni": "",
+    "date_exp_cni": "2003-03-21T00:00:00.000Z"
+}
+
+### Modifer un parent
+PUT http://localhost:8000/parents/4 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "DIHU",
+    "prenoms": "noco",
+    "pseudo": "nocoDIHU14",
+    "photo": "DIHUnoco.jpeg",
+    "email": "nocoDIHU@yahoo.fr",
+    "contacts": [
+      "02 30 14 02",
+      "87 59 32 15"
+    ],
+    "no_cni": "",
+    "date_exp_cni": "2003-03-21T00:00:00.000Z"
+}
+
+###supprimer un parent
+DELETE http://localhost:8000/parents/2 HTTP/1.1

@@ -1,0 +1,35 @@
+### list des educateurs
+GET http://localhost:8000/educateurs HTTP/1.1
+
+### ajouter un educateur
+POST http://localhost:8000/educateurs HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "GYVE",
+    "prenoms": "baku",
+    "pseudo": "bakuGYVE4",
+    "photo": "GYVEbaku.jpeg",
+    "email": "bakuGYVE@gmail.com",
+    "contacts": null,
+    "no_cni": "",
+    "date_exp_cni": "2003-12-24T00:00:00.000Z"
+}
+
+### Modifer un educateur
+PUT http://localhost:8000/educateurs/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "GYVE",
+    "prenoms": "baku",
+    "pseudo": "bakuGYVE4",
+    "photo": "GYVEbaku.jpeg",
+    "email": "bakuGYVE@gmail.com",
+    "contacts": null,
+    "no_cni": "",
+    "date_exp_cni": "2003-12-24T00:00:00.000Z"
+}
+
+###supprimer un educateur
+DELETE http://localhost:8000/educateurs/1 HTTP/1.1

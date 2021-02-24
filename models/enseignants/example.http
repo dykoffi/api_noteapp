@@ -1,0 +1,37 @@
+### list des enseignants
+GET http://localhost:8000/enseignants HTTP/1.1
+
+### ajouter un enseignant
+POST http://localhost:8000/enseignants HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "GYVE",
+    "prenoms": "baku",
+    "pseudo": "bakuGYVE4",
+    "photo": "GYVEbaku.jpeg",
+    "email": "bakuGYVE@gmail.com",
+    "contacts": null,
+    "no_cni": "",
+    "date_exp_cni": "2003-12-24T00:00:00.000Z",
+    "matricule": "GYV-ba/2003"
+}
+
+### Modifer un enseignant
+PUT http://localhost:8000/enseignants/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "GYVE",
+    "prenoms": "bakku",
+    "pseudo": "bakuGYVE4",
+    "photo": "GYVEbaku.jpeg",
+    "email": "bakuGYVE@gmail.com",
+    "contacts": null,
+    "no_cni": "",
+    "date_exp_cni": "2003-12-24T00:00:00.000Z",
+    "matricule": "GYV-ba/2003"
+}
+
+###supprimer un enseignant
+DELETE http://localhost:8000/enseignants/2 HTTP/1.1

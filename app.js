@@ -22,6 +22,7 @@ app.use(cookieparser()); //activation des cookies
 app.use('/parents', require('./models/parents/routes'))
 app.use('/enseignants', require('./models/enseignants/routes'))
 app.use('/educateurs', require('./models/educateurs/routes'))
+app.use('/eleves', require('./models/eleves/routes'))
 app.use('/drens', require('./models/drens/routes'))
 app.use('/etablissements', require('./models/etablissements/routes'))
 

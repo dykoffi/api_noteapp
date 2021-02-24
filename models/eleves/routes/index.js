@@ -1,17 +1,17 @@
 const express = require('express')
 const router = express.Router();
 const {
-    get_educateurs,
-    del_educateurs,
-    post_educateurs,
-    put_educateurs
+    get_eleves,
+    del_eleves,
+    post_eleves,
+    put_eleves
 } = require("../db/request")
 
 const header = require('../db/headers')
 
 router
     .get("/", (req, res, next) => {
-        pg.query(get_educateurs, (error, result) => {
+        pg.query(get_eleves, (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)
@@ -23,7 +23,7 @@ router
         })
     })
     .delete("/:id", (req, res, next) => {
-        pg.query(del_educateurs, [req.params.id], (error, result) => {
+        pg.query(del_eleves, [req.params.id], (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)
@@ -37,8 +37,8 @@ router
     .post("/", (req, res, next) => {
         let body = {}
         try { body = JSON.parse(Object.keys(req.body)[0]) } catch (error) { body = req.body }
-        const { nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni } = body
-        pg.query(post_educateurs, [nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni], (error, result) => {
+        const { nom, prenoms, pseudo, photo, email, contacts, matricule, date_naissance, etablissement, classe } = body
+        pg.query(post_eleves, [nom, prenoms, pseudo, photo, email, contacts, matricule, date_naissance, etablissement, classe], (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)
@@ -52,8 +52,8 @@ router
     .put("/:id", (req, res, next) => {
         let body = {}
         try { body = JSON.parse(Object.keys(req.body)[0]) } catch (error) { body = req.body }
-        const { nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni } = body
-        pg.query(put_educateurs, [nom, prenoms, pseudo, photo, email, contacts, no_cni, date_exp_cni, req.params.id], (error, result) => {
+        const { nom, prenoms, pseudo, photo, email, contacts, matricule, date_naissance, etablissement, classe } = body
+        pg.query(put_eleves, [nom, prenoms, pseudo, photo, email, contacts, matricule, date_naissance, etablissement, classe, req.params.id], (error, result) => {
             if (error) {
                 console.log(error);
                 res.end(error)

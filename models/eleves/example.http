@@ -1,0 +1,39 @@
+### list des eleves
+GET http://localhost:8000/eleves HTTP/1.1
+
+### ajouter un eleve
+POST http://localhost:8000/eleves HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "SEUI",
+    "prenoms": "Molks",
+    "pseudo": "cojunaLOMAN23",
+    "photo": "LOMANcojuna.jpeg",
+    "email": "cojunaLOMAN@gmail.com",
+    "contacts": null,
+    "matricule": "Hujs",
+    "date_naissance": "2008-04-20T00:00:00.000Z",
+    "etablissement": 7,
+    "classe": 6
+}
+
+### Modifer un eleve
+PUT http://localhost:8000/eleves/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "LOMAN",
+    "prenoms": "cojuna",
+    "pseudo": "cojunaLOMAN23",
+    "photo": "LOMANcojuna.jpeg",
+    "email": "cojunaLOMAN@gmail.com",
+    "contacts": null,
+    "matricule": "LOM-co/2008",
+    "date_naissance": "2008-04-20T00:00:00.000Z",
+    "etablissement": 7,
+    "classe": 6
+}
+
+###supprimer un eleve
+DELETE http://localhost:8000/eleves/2 HTTP/1.1
