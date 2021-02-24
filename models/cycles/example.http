@@ -1,0 +1,21 @@
+### list des cycles
+GET http://localhost:8000/cycles HTTP/1.1
+
+### ajouter un cycle
+POST http://localhost:8000/cycles HTTP/1.1
+content-type: application/json
+
+{
+    "type": "3eme cycle"
+}
+
+### Modifer un cycle
+PUT http://localhost:8000/cycles/5 HTTP/1.1
+content-type: application/json
+
+{
+    "type": "3emer cycle"
+}
+
+###supprimer un cycle
+DELETE http://localhost:8000/cycles/4 HTTP/1.1

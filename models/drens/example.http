@@ -1,0 +1,27 @@
+### list des drens
+GET http://localhost:8000/drens HTTP/1.1
+
+### ajouter un dren
+POST http://localhost:8000/drens HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nom": "PARIS",
+    "zone": "SUD",
+    "email": "parissud@yahoo.fr"
+}
+
+### Modifer un dren
+PUT http://localhost:8000/drens/4 HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nom": "PARIS",
+    "zone": "SUD",
+    "email": "parissud@yahoo.fr"
+}
+
+###supprimer un dren
+DELETE http://localhost:8000/drens/4 HTTP/1.1

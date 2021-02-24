@@ -1,0 +1,23 @@
+### list des classes
+GET http://localhost:8000/classes HTTP/1.1
+
+### ajouter un classe
+POST http://localhost:8000/classes HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "10eme",
+    "cycle": 4
+}
+
+### Modifer un classe
+PUT http://localhost:8000/classes/4 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "tereme",
+    "cycle": 1
+}
+
+###supprimer un classe
+DELETE http://localhost:8000/classes/4 HTTP/1.1
