@@ -1,0 +1,20 @@
+INSERT INTO app.matieres
+    (nom, code, coefficient)
+VALUES
+    ('MATHS','MA74F',2.5),
+    ('ELECTRONIQUE','Elec485',2),
+    ('FRANCAIS','FR687r',3.6),
+    ('ESPAGNOL','ES68746s',2.4),
+    ('ANALYSE','ANA74f',3.1),
+    ('SYSTEME DE DONNÉES','SYSD6874v',4.3),
+    ('DROIT','DR58768D',1.3),
+    ('GESTION DES ENTREPRISES','GES6578',4.0),
+    ('PHYSIQUE','PHY6465',4),
+    ('CHIMIE','CHI3687',3.2),
+    ('SCIENCES DES HUMAINS','SCIHU6877',1.3),
+    ('PROJETS INTERNE','PROIN25',2.3),
+    ('ENTREPRENARIAT','ENTR6568',3.2),
+    ('SEMINAIRE','SEM1268',6.1),
+    ('ECONOMIE','ECO1368',3.2),
+    ('AGRICULTURE','AGRI57854',2.1),
+    ('ANGLAIS','ANG968',2);

@@ -79,16 +79,11 @@ CREATE TABLE app.souscriptions(
     eleve                               INT REFERENCES app.eleves(id)
 );
 
-CREATE TABLE app.coefficients(
-    id                                  SERIAL PRIMARY KEY,
-    num                                 INT
-);
-
 CREATE TABLE app.matieres(
     id                                  SERIAL PRIMARY KEY,
     nom                                 VARCHAR(200),
     code                                VARCHAR(200),
-    coefficient                         INT REFERENCES app.coefficients(id)
+    coefficient                         FLOAT
 );
 
 CREATE TABLE app.evaluations(

@@ -6,3 +6,4 @@
 \i data/eleves.sql;
 \i data/parents.sql;
 \i data/educateurs.sql;
+\i data/matieres.sql;
