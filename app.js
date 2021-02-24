@@ -7,7 +7,7 @@ const createError = require('http-errors'); // generer les erreurs hhtp
 const path = require('path'); //gerer les chemins
 const cookieparser = require('cookie-parser')
 const pg = require("./databases/connexion")
-//activation des fonctionnalités de l'API
+    //activation des fonctionnalités de l'API
 app.use(cors()); //cross origin requêtes
 app.use(express.json()); //Analyser application/json
 app.use(express.urlencoded({ extended: false })); //Analyser Application/x-www-form-urlenconded
@@ -24,6 +24,8 @@ app.use('/enseignants', require('./models/enseignants/routes'))
 app.use('/educateurs', require('./models/educateurs/routes'))
 app.use('/eleves', require('./models/eleves/routes'))
 app.use('/drens', require('./models/drens/routes'))
+app.use('/classes', require('./models/classes/routes'))
+app.use('/cycles', require('./models/cycles/routes'))
 app.use('/etablissements', require('./models/etablissements/routes'))
 
 //

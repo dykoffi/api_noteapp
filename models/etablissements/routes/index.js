@@ -23,16 +23,21 @@ router
         })
     })
     .delete("/:id", (req, res, next) => {
-        pg.query(del_etablissements, [req.params.id], (error, result) => {
-            if (error) {
-                console.log(error);
-                res.end(error)
-            } else {
-                res.header(header)
-                res.status(200)
-                res.json(result.rows)
-            }
-        })
+        try {
+            pg.query(del_etablissements, [req.params.id], (error, result) => {
+                if (error) {
+                    console.log(error);
+                    res.end(error)
+                } else {
+                    res.header(header)
+                    res.status(200)
+                    res.json(result.rows)
+                }
+            })
+        } catch (error) {
+            console.log(error);
+        }
+
     })
     .post("/", (req, res, next) => {
         let body = {}
