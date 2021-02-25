@@ -1,5 +1,7 @@
 # api_noteapp
 
+SUPPOSONS POSTGRES INSTALLÉ
+
 sudo -iu postgres
 psql
 
@@ -17,4 +19,4 @@ psql noteapp -U oscav -h localhost
 cd ..
 node index.js
 
-CHAQUE MODELES CONTIENT UN FICHIER example.http qui regroupe toutes les requêtes prévues pour ces dits modèles. Il peut arriver que les requêtes DELETE génèrent des erreurs si la table associée est référencée dans une autre. Les mésures seront pris afin de maintenir ce problème
+CHAQUE MODELES CONTIENT UN FICHIER example.http qui regroupe toutes les requêtes prévues pour ces dits modèles. Il peut arriver que les requêtes DELETE génèrent des erreurs si la table associée est référencée dans une autre. Les mésures seront prise afin de maintenir ce problème.
