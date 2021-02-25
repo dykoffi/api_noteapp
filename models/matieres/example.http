@@ -1,0 +1,25 @@
+### list des matieres
+GET http://localhost:8000/matieres HTTP/1.1
+
+### ajouter un matiere
+POST http://localhost:8000/matieres HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "MECANIQUE",
+    "code": "MECA59889",
+    "coefficient": 3.2
+}
+
+### Modifer un matiere
+PUT http://localhost:8000/matieres/4 HTTP/1.1
+content-type: application/json
+
+{
+    "nom": "ESPAGNOL",
+    "code": "ESP34564",
+    "coefficient": 3
+}
+
+###supprimer un matiere
+DELETE http://localhost:8000/matieres/4 HTTP/1.1

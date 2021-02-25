@@ -26,6 +26,7 @@ app.use('/eleves', require('./models/eleves/routes'))
 app.use('/drens', require('./models/drens/routes'))
 app.use('/classes', require('./models/classes/routes'))
 app.use('/cycles', require('./models/cycles/routes'))
+app.use('/matieres', require('./models/matieres/routes'))
 app.use('/etablissements', require('./models/etablissements/routes'))
 
 //

@@ -6,7 +6,6 @@ POST http://localhost:8000/drens HTTP/1.1
 content-type: application/json
 
 {
-    "id": 1,
     "nom": "PARIS",
     "zone": "SUD",
     "email": "parissud@yahoo.fr"
@@ -17,7 +16,6 @@ PUT http://localhost:8000/drens/4 HTTP/1.1
 content-type: application/json
 
 {
-    "id": 1,
     "nom": "PARIS",
     "zone": "SUD",
     "email": "parissud@yahoo.fr"
